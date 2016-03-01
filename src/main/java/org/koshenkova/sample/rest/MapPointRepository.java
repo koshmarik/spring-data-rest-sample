@@ -11,10 +11,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 
-//@RepositoryRestResource//(excerptProjection = MapPointDto.class)
+//@RepositoryRestResource(excerptProjection = MapPointDto.class, path = "map_view", collectionResourceRel = "map_view", itemResourceRel = "map_view")
 @RestResource(path = "map_point", rel = "map_point")
 public interface MapPointRepository extends PagingAndSortingRepository<MapPoint, Long> {
-
-    Page<MapPoint> findAll(Pageable pageable);
 
 }
